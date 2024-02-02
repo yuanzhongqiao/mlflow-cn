@@ -1,185 +1,107 @@
-=============================================
-MLflow: A Machine Learning Lifecycle Platform
-=============================================
+<div class="Box-sc-g0xbh4-0 bJMeLZ js-snippet-clipboard-copy-unpositioned" data-hpc="true"><article class="markdown-body entry-content container-lg" itemprop="text"><h1 tabindex="-1" dir="auto"><a id="user-content-mlflow-a-machine-learning-lifecycle-platform" class="anchor" aria-hidden="true" tabindex="-1" href="#mlflow-a-machine-learning-lifecycle-platform"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MLflow：机器学习生命周期平台</font></font></h1>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MLflow 是一个简化机器学习开发的平台，包括跟踪实验、将代码打包成可重复的运行以及共享和部署模型。</font><font style="vertical-align: inherit;">MLflow 提供了一组轻量级 API，可与任何现有的机器学习应用程序或库（TensorFlow、PyTorch、XGBoost 等）一起使用，无论您当前在何处运行 ML 代码（例如在笔记本、独立应用程序或云中）。</font><font style="vertical-align: inherit;">MLflow的当前组件是：</font></font></p>
+<ul dir="auto">
+<li><a href="https://mlflow.org/docs/latest/tracking.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MLflow Tracking</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：一个 API，用于记录机器学习实验中的参数、代码和结果，并使用交互式 UI 进行比较。</font></font></li>
+<li><a href="https://mlflow.org/docs/latest/projects.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MLflow 项目</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：一种使用 Conda 和 Docker 进行可重复运行的代码打包格式，因此您可以与其他人共享您的 ML 代码。</font></font></li>
+<li><a href="https://mlflow.org/docs/latest/models.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MLflow 模型</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：一种模型打包格式和工具，可让您轻松部署相同的模型（来自任何 ML 库），以在 Docker、Apache Spark、Azure ML 和 AWS SageMaker 等平台上进行批量和实时评分。</font></font></li>
+<li><a href="https://mlflow.org/docs/latest/model-registry.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MLflow 模型注册表</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：集中式模型存储、API 集和 UI，用于协作管理 MLflow 模型的整个生命周期。</font></font></li>
+</ul>
+<p dir="auto"><a href="https://mlflow.org/docs/latest/index.html" rel="nofollow"><img alt="最新文档" src="https://camo.githubusercontent.com/84b1f0fdc47e7e29a3d9132b5040951cd3b6c89158374eb4de1152510fcf1916/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f646f63732d6c61746573742d737563636573732e7376673f7374796c653d666f722d7468652d6261646765" data-canonical-src="https://img.shields.io/badge/docs-latest-success.svg?style=for-the-badge" style="max-width: 100%;"></a> <a href="https://pypi.org/project/mlflow/" rel="nofollow"><img alt="最新的 Python 版本" src="https://camo.githubusercontent.com/b674d536556605a7f5630b093eb960ae0ae536771cf8b8277905b0e72f069692/68747470733a2f2f696d672e736869656c64732e696f2f707970692f762f6d6c666c6f772e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d70797069266c6f676f436f6c6f723d7768697465" data-canonical-src="https://img.shields.io/pypi/v/mlflow.svg?style=for-the-badge&amp;logo=pypi&amp;logoColor=white" style="max-width: 100%;"></a> <a href="https://anaconda.org/conda-forge/mlflow" rel="nofollow"><img alt="最新 Conda 版本" src="https://camo.githubusercontent.com/f79a6a9ded6b58a0747b535721419ad57876762625ee605bc58018f433fc1e83/68747470733a2f2f696d672e736869656c64732e696f2f636f6e64612f766e2f636f6e64612d666f7267652f6d6c666c6f772e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d616e61636f6e6461" data-canonical-src="https://img.shields.io/conda/vn/conda-forge/mlflow.svg?style=for-the-badge&amp;logo=anaconda" style="max-width: 100%;"></a> <a href="https://cran.r-project.org/package=mlflow" rel="nofollow"><img alt="最新 CRAN 版本" src="https://camo.githubusercontent.com/3d10a142551b7e037472e14c0ab1968522d3c8f4f9fdd5cb0f2677678f338749/68747470733a2f2f696d672e736869656c64732e696f2f6372616e2f762f6d6c666c6f772e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d72" data-canonical-src="https://img.shields.io/cran/v/mlflow.svg?style=for-the-badge&amp;logo=r" style="max-width: 100%;"></a> <a href="https://mvnrepository.com/artifact/org.mlflow" rel="nofollow"><img alt="梅文中心" src="https://camo.githubusercontent.com/79be14883edb9d8ac2524be7d653eb834835b70c27138ec745fac7f616445d51/68747470733a2f2f696d672e736869656c64732e696f2f6d6176656e2d63656e7472616c2f762f6f72672e6d6c666c6f772f6d6c666c6f772d706172656e742e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d6170616368652d6d6176656e" data-canonical-src="https://img.shields.io/maven-central/v/org.mlflow/mlflow-parent.svg?style=for-the-badge&amp;logo=apache-maven" style="max-width: 100%;"></a> <a href="https://github.com/mlflow/mlflow/blob/master/LICENSE.txt"><img alt="阿帕奇 2 许可证" src="https://camo.githubusercontent.com/7417b0e42fa519122395ca18ab945e67f9b373a13b4236d0775560502c37e3f8/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d417061636865253230322d627269676874677265656e2e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d617061636865" data-canonical-src="https://img.shields.io/badge/license-Apache%202-brightgreen.svg?style=for-the-badge&amp;logo=apache" style="max-width: 100%;"></a> <a href="https://pepy.tech/project/mlflow" rel="nofollow"><img alt="总下载量" src="https://camo.githubusercontent.com/217603efb4f71bfe47ee338c7bf948243cf7fda385bd3ee0e82c0a0f9b1966b5/68747470733a2f2f696d672e736869656c64732e696f2f707970692f64772f6d6c666c6f773f7374796c653d666f722d7468652d6261646765266c6f676f3d70797069266c6f676f436f6c6f723d7768697465" data-canonical-src="https://img.shields.io/pypi/dw/mlflow?style=for-the-badge&amp;logo=pypi&amp;logoColor=white" style="max-width: 100%;"></a> <a href="https://join.slack.com/t/mlflow-users/shared_invite/zt-1iffrtbly-UNU8hV03aV8feUeGmqf_uA" rel="nofollow"><img alt="松弛" src="https://camo.githubusercontent.com/81ea1a98a6119c6db515ad24f6ef416796f2011585fbf93440ff5070d81c783e/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f736c61636b2d406d6c666c6f772d2d75736572732d4346304535422e7376673f6c6f676f3d736c61636b266c6f676f436f6c6f723d7768697465266c6162656c436f6c6f723d334630453430267374796c653d666f722d7468652d6261646765" data-canonical-src="https://img.shields.io/badge/slack-@mlflow--users-CF0E5B.svg?logo=slack&amp;logoColor=white&amp;labelColor=3F0E40&amp;style=for-the-badge" style="max-width: 100%;"></a> <a href="https://twitter.com/MLflow" rel="nofollow"><img alt="帐户推特" src="https://camo.githubusercontent.com/29c27f293cfa726715b58f495da00316302d4a79f7bce4685236dc91d94efc5d/68747470733a2f2f696d672e736869656c64732e696f2f747769747465722f666f6c6c6f772f4d4c666c6f773f7374796c653d666f722d7468652d6261646765266c6162656c436f6c6f723d303041434545266c6f676f3d74776974746572266c6f676f436f6c6f723d7768697465" data-canonical-src="https://img.shields.io/twitter/follow/MLflow?style=for-the-badge&amp;labelColor=00ACEE&amp;logo=twitter&amp;logoColor=white" style="max-width: 100%;"></a></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">工作状态</font></font></p>
+<p dir="auto"><a href="https://github.com/mlflow-automation/mlflow/actions/workflows/examples.yml?query=workflow%3AExamples+event%3Aschedule"><img alt="示例 操作 状态" src="https://camo.githubusercontent.com/24a9f21e133a569002baf739f06835820edcd088e52caf4863ce9e6e380eaf2c/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f616374696f6e732f776f726b666c6f772f7374617475732f6d6c666c6f772d6175746f6d6174696f6e2f6d6c666c6f772f6578616d706c65732e796d6c3f6272616e63683d6d6173746572266576656e743d7363686564756c65266c6162656c3d4578616d706c6573267374796c653d666f722d7468652d6261646765266c6f676f3d676974687562" data-canonical-src="https://img.shields.io/github/actions/workflow/status/mlflow-automation/mlflow/examples.yml?branch=master&amp;event=schedule&amp;label=Examples&amp;style=for-the-badge&amp;logo=github" style="max-width: 100%;"></a> <a href="https://github.com/mlflow-automation/mlflow/actions/workflows/cross-version-tests.yml?query=workflow%3A%22Cross+version+tests%22+event%3Aschedule"><img alt="跨版本测试" src="https://camo.githubusercontent.com/df97661d7c40c0d8db775f2c45d2850d284c4956d5d7d0e752b196453981c667/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f616374696f6e732f776f726b666c6f772f7374617475732f6d6c666c6f772d6175746f6d6174696f6e2f6d6c666c6f772f63726f73732d76657273696f6e2d74657374732e796d6c3f6272616e63683d6d6173746572266576656e743d7363686564756c65266c6162656c3d43726f737325323076657273696f6e2532307465737473267374796c653d666f722d7468652d6261646765266c6f676f3d676974687562" data-canonical-src="https://img.shields.io/github/actions/workflow/status/mlflow-automation/mlflow/cross-version-tests.yml?branch=master&amp;event=schedule&amp;label=Cross%20version%20tests&amp;style=for-the-badge&amp;logo=github" style="max-width: 100%;"></a> <a href="https://github.com/mlflow-automation/mlflow/actions/workflows/r.yml?query=workflow%3AR+event%3Aschedule"><img alt="r-开发" src="https://camo.githubusercontent.com/24280782b68c1806716e6e6e7319554d43e4cb19550a55392ffa4177342ef535/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f616374696f6e732f776f726b666c6f772f7374617475732f6d6c666c6f772d6175746f6d6174696f6e2f6d6c666c6f772f722e796d6c3f6272616e63683d6d6173746572266576656e743d7363686564756c65266c6162656c3d722d646576656c267374796c653d666f722d7468652d6261646765266c6f676f3d676974687562" data-canonical-src="https://img.shields.io/github/actions/workflow/status/mlflow-automation/mlflow/r.yml?branch=master&amp;event=schedule&amp;label=r-devel&amp;style=for-the-badge&amp;logo=github" style="max-width: 100%;"></a> <a href="https://github.com/mlflow-automation/mlflow/actions/workflows/requirements.yml?query=workflow%3A&quot;Test+requirements&quot;+event%3Aschedule"><img alt="测试要求" src="https://camo.githubusercontent.com/e40b89bab54b1259feaf5efcae0cff2cf59bfd7d172726e712bfd8b971b87f56/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f616374696f6e732f776f726b666c6f772f7374617475732f6d6c666c6f772d6175746f6d6174696f6e2f6d6c666c6f772f726571756972656d656e74732e796d6c3f6272616e63683d6d6173746572266576656e743d7363686564756c65266c6162656c3d74657374253230726571756972656d656e7473266c6f676f3d676974687562267374796c653d666f722d7468652d6261646765" data-canonical-src="https://img.shields.io/github/actions/workflow/status/mlflow-automation/mlflow/requirements.yml?branch=master&amp;event=schedule&amp;label=test%20requirements&amp;logo=github&amp;style=for-the-badge" style="max-width: 100%;"></a> <a href="https://github.com/mlflow/mlflow/actions?query=workflow%3AStale+event%3Aschedule"><img alt="陈旧" src="https://camo.githubusercontent.com/019a9019a9244827c87cf16305bc424b47d01050a1ad61082c1ee60545fdafbc/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f616374696f6e732f776f726b666c6f772f7374617475732f6d6c666c6f772f6d6c666c6f772f7374616c652e796d6c3f6272616e63683d6d6173746572266576656e743d7363686564756c65266c6162656c3d7374616c65266c6f676f3d676974687562267374796c653d666f722d7468652d6261646765" data-canonical-src="https://img.shields.io/github/actions/workflow/status/mlflow/mlflow/stale.yml?branch=master&amp;event=schedule&amp;label=stale&amp;logo=github&amp;style=for-the-badge" style="max-width: 100%;"></a> <a href="https://github.com/mlflow/mlflow/actions/workflows/push-images.yml?query=event%3Arelease"><img alt="推送图像" src="https://camo.githubusercontent.com/e488ee4a42023581d1e9c69756c0f042143b25bdf43fdca3bbe5a8fb1555abb8/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f616374696f6e732f776f726b666c6f772f7374617475732f6d6c666c6f772f6d6c666c6f772f707573682d696d616765732e796d6c3f6576656e743d72656c65617365266c6162656c3d707573682d696d61676573266c6f676f3d676974687562267374796c653d666f722d7468652d6261646765" data-canonical-src="https://img.shields.io/github/actions/workflow/status/mlflow/mlflow/push-images.yml?event=release&amp;label=push-images&amp;logo=github&amp;style=for-the-badge" style="max-width: 100%;"></a></p>
+<a name="user-content-installing"></a>
+<h2 tabindex="-1" dir="auto"><a id="user-content-installing" class="anchor" aria-hidden="true" tabindex="-1" href="#installing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安装中</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">通过 PyPI 安装 MLflow</font></font><code>pip install mlflow</code></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MLflow 需要</font></font><code>conda</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">启用</font></font><code>PATH</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">项目功能。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MLflow master 的夜间快照也可</font></font><a href="https://mlflow-snapshots.s3-us-west-2.amazonaws.com/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在此处</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">获取。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">通过 PyPI 安装 MLflow 的较低依赖项子集</font></font><code>pip install mlflow-skinny</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+可以根据所需场景添加额外的依赖项。</font><font style="vertical-align: inherit;">例如，</font></font><code>pip install mlflow-skinny pandas numpy</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">允许 mlflow.pyfunc.log_model 支持。</font></font></p>
+<a name="user-content-documentation"></a>
+<h2 tabindex="-1" dir="auto"><a id="user-content-documentation" class="anchor" aria-hidden="true" tabindex="-1" href="#documentation"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文档</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"></font><a href="https://mlflow.org/docs/latest/index.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MLflow 的官方文档可以在https://mlflow.org/docs/latest/index.html</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">找到</font><font style="vertical-align: inherit;">。</font></font></p>
+<a name="user-content-roadmap"></a>
+<h2 tabindex="-1" dir="auto"><a id="user-content-roadmap" class="anchor" aria-hidden="true" tabindex="-1" href="#roadmap"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">路线图</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">当前的 MLflow 路线图可在</font></font><a href="https://github.com/mlflow/mlflow/milestone/3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">https://github.com/mlflow/mlflow/milestone/3</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">上获取。</font><font style="vertical-align: inherit;">我们正在寻求对带有该标签的所有路线图项目的贡献</font></font><code>help wanted</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font><font style="vertical-align: inherit;">请参阅
+</font></font><a href="#contributing"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">贡献</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">部分以获取更多信息。</font></font></p>
+<a name="user-content-community"></a>
+<h2 tabindex="-1" dir="auto"><a id="user-content-community" class="anchor" aria-hidden="true" tabindex="-1" href="#community"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">社区</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">有关 MLflow 使用的帮助或问题（例如“我该如何做 X？”），请参阅</font></font><a href="https://mlflow.org/docs/latest/index.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文档</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+或</font></font><a href="https://stackoverflow.com/questions/tagged/mlflow" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Stack Overflow</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">要报告错误、提交文档问题或提交功能请求，请打开 GitHub 问题。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">有关发布公告和其他讨论，请订阅我们的邮件列表 ( </font></font><a href="mailto:mlflow-users@googlegroups.com"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">mlflow-users@googlegroups.com</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ) 或加入我们的</font></font><a href="https://join.slack.com/t/mlflow-users/shared_invite/zt-1iffrtbly-UNU8hV03aV8feUeGmqf_uA" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Slack</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<a name="user-content-running-a-sample-app-with-the-tracking-api"></a>
+<h2 tabindex="-1" dir="auto"><a id="user-content-running-a-sample-app-with-the-tracking-api" class="anchor" aria-hidden="true" tabindex="-1" href="#running-a-sample-app-with-the-tracking-api"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">使用 Tracking API 运行示例应用程序</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">该程序</font></font><code>examples</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">使用 MLflow Tracking API。</font><font style="vertical-align: inherit;">例如，运行：</font></font></p>
+<pre><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">python 示例/快速入门/mlflow_tracking.py
+</font></font></pre>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">该程序将使用</font></font><a href="https://mlflow.org/docs/latest/tracking.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MLflow Tracking API</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，它将跟踪数据记录在</font></font><code>./mlruns</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">. </font><font style="vertical-align: inherit;">然后可以使用跟踪 UI 进行查看。</font></font></p>
+<a name="user-content-launching-the-tracking-ui"></a>
+<h2 tabindex="-1" dir="auto"><a id="user-content-launching-the-tracking-ui" class="anchor" aria-hidden="true" tabindex="-1" href="#launching-the-tracking-ui"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">启动跟踪 UI</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MLflow Tracking UI 将显示</font></font><code>./mlruns</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在</font></font><a href="http://localhost:5000" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">http://localhost:5000</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">登录的运行。</font><font style="vertical-align: inherit;">开始：</font></font></p>
+<pre><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">流量用户界面
+</font></font></pre>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">注意：</font></font></strong><font style="vertical-align: inherit;"></font><code>mlflow ui</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">不建议从 MLflow 的克隆中</font><font style="vertical-align: inherit;">运行- 这样做将从源代码运行开发 UI。</font><font style="vertical-align: inherit;">我们建议从不同的工作目录运行 UI，通过选项指定后端存储</font></font><code>--backend-store-uri</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font><a href="/mlflow/mlflow/blob/master/CONTRIBUTING.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">或者，请参阅贡献者指南</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">中有关运行开发 UI 的说明</font><font style="vertical-align: inherit;">。</font></font></p>
+<a name="user-content-running-a-project-from-a-uri"></a>
+<h2 tabindex="-1" dir="auto"><a id="user-content-running-a-project-from-a-uri" class="anchor" aria-hidden="true" tabindex="-1" href="#running-a-project-from-a-uri"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">从 URI 运行项目</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">该</font></font><code>mlflow run</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">命令允许您从本地路径或 Git URI 运行使用 MLproject 文件打包的项目：</font></font></p>
+<pre><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">mlflow 运行示例/sklearn_elasticnet_wine -P alpha=0.4</font></font><font></font>
+<font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+mlflow 运行 https://github.com/mlflow/mlflow-example.git -P alpha=0.4</font></font><font></font>
+</pre>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">请</font></font><code>examples/sklearn_elasticnet_wine</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">参阅 参考资料 中带有 MLproject 文件的示例项目。</font></font></p>
+<a name="user-content-saving-and-serving-models"></a>
+<h2 tabindex="-1" dir="auto"><a id="user-content-saving-and-serving-models" class="anchor" aria-hidden="true" tabindex="-1" href="#saving-and-serving-models"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">保存和服务模型</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">为了说明管理模型，该</font></font><code>mlflow.sklearn</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">包可以将 scikit-learn 模型记录为 MLflow 工件，然后再次加载它们以进行服务。</font><font style="vertical-align: inherit;">有一个示例培训应用程序
+</font></font><code>examples/sklearn_logistic_regression/train.py</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，您可以按如下方式运行：</font></font></p>
+<pre><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">$ python 示例/sklearn_logistic_regression/train.py</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+得分：0.666</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+模型保存在运行 &lt;run-id&gt; 中</font></font><font></font>
+<font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+$ mlflow 模型服务 --model-uri 运行：/&lt;run-id&gt;/model</font></font><font></font>
+<font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+$curl -d '{"dataframe_split": {"columns":[0],"index":[0,1],"data":[[1],[-1]]}}' -H '内容-类型：应用程序/json'本地主机：5000/调用</font></font><font></font>
+</pre>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">注意：</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果使用 MLflow Skinny ( ) 进行模型服务，</font><font style="vertical-align: inherit;">则需要安装</font></font><code>pip install mlflow-skinny</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">额外的必需依赖项（即），MLflow 服务器才能正常运行。</font></font><code>flask</code><font style="vertical-align: inherit;"></font></p>
+<a name="user-content-official-mlflow-docker-image"></a>
+<h2 tabindex="-1" dir="auto"><a id="user-content-official-mlflow-docker-image" class="anchor" aria-hidden="true" tabindex="-1" href="#official-mlflow-docker-image"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">官方 MLflow Docker 镜像</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">官方 MLflow Docker 映像可在 GitHub 容器注册表</font></font><a href="https://ghcr.io/mlflow/mlflow" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">https://ghcr.io/mlflow/mlflow</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">上找到。</font></font></p>
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto"><pre><span class="pl-k">export</span> CR_PAT=YOUR_TOKEN
+<span class="pl-c1">echo</span> <span class="pl-smi">$CR_PAT</span> <span class="pl-k">|</span> docker login ghcr.io -u USERNAME --password-stdin
+<span class="pl-c"><span class="pl-c">#</span> Pull the latest version</span>
+docker pull ghcr.io/mlflow/mlflow
+<span class="pl-c"><span class="pl-c">#</span> Pull 2.2.1</span>
+docker pull ghcr.io/mlflow/mlflow:v2.2.1</pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="export CR_PAT=YOUR_TOKEN
+echo $CR_PAT | docker login ghcr.io -u USERNAME --password-stdin
+# Pull the latest version
+docker pull ghcr.io/mlflow/mlflow
+# Pull 2.2.1
+docker pull ghcr.io/mlflow/mlflow:v2.2.1" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<a name="user-content-contributing"></a>
+<h2 tabindex="-1" dir="auto"><a id="user-content-contributing" class="anchor" aria-hidden="true" tabindex="-1" href="#contributing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">贡献</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我们热烈欢迎对 MLflow 做出贡献。</font><font style="vertical-align: inherit;">我们还寻求对
+</font></font><a href="https://github.com/mlflow/mlflow/milestone/3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MLflow 路线图</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">上的项目做出贡献。</font><font style="vertical-align: inherit;">请参阅我们的
+</font></font><a href="/mlflow/mlflow/blob/master/CONTRIBUTING.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">贡献指南</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，了解有关为 MLflow 做出贡献的更多信息。</font></font></p>
+<a name="user-content-core-members"></a>
+<h2 tabindex="-1" dir="auto"><a id="user-content-core-members" class="anchor" aria-hidden="true" tabindex="-1" href="#core-members"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">核心成员</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MLflow 目前由以下核心成员维护，数百名才华横溢的社区成员做出了重大贡献。</font></font></p>
+<ul dir="auto">
+<li><a href="https://github.com/BenWilson2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">本·威尔逊</font></font></a></li>
+<li><a href="https://github.com/dbczumar"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">科里·祖玛尔</font></font></a></li>
+<li><a href="https://github.com/daniellok-db"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">乐丹尼尔</font></font></a></li>
+<li><a href="https://github.com/gabrielfu"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">傅嘉伟</font></font></a></li>
+<li><a href="https://github.com/harupy"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">河村晴隆</font></font></a></li>
+<li><a href="https://github.com/serena-ruan"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">阮诗琳娜</font></font></a></li>
+<li><a href="https://github.com/WeichenXu123"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">徐伟辰</font></font></a></li>
+<li><a href="https://github.com/B-Step62"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">渡边由纪</font></font></a></li>
+</ul>
 
-MLflow is a platform to streamline machine learning development, including tracking experiments, packaging code
-into reproducible runs, and sharing and deploying models. MLflow offers a set of lightweight APIs that can be
-used with any existing machine learning application or library (TensorFlow, PyTorch, XGBoost, etc), wherever you
-currently run ML code (e.g. in notebooks, standalone applications or the cloud). MLflow's current components are:
-
-* `MLflow Tracking <https://mlflow.org/docs/latest/tracking.html>`_: An API to log parameters, code, and
-  results in machine learning experiments and compare them using an interactive UI.
-* `MLflow Projects <https://mlflow.org/docs/latest/projects.html>`_: A code packaging format for reproducible
-  runs using Conda and Docker, so you can share your ML code with others.
-* `MLflow Models <https://mlflow.org/docs/latest/models.html>`_: A model packaging format and tools that let
-  you easily deploy the same model (from any ML library) to batch and real-time scoring on platforms such as
-  Docker, Apache Spark, Azure ML and AWS SageMaker.
-* `MLflow Model Registry <https://mlflow.org/docs/latest/model-registry.html>`_: A centralized model store, set of APIs, and UI, to collaboratively manage the full lifecycle of MLflow Models.
-
-|docs| |pypi| |conda-forge| |cran| |maven| |license| |downloads| |slack| |twitter|
-
-.. |docs| image:: https://img.shields.io/badge/docs-latest-success.svg?style=for-the-badge
-    :target: https://mlflow.org/docs/latest/index.html
-    :alt: Latest Docs
-.. |pypi| image:: https://img.shields.io/pypi/v/mlflow.svg?style=for-the-badge&logo=pypi&logoColor=white
-    :target: https://pypi.org/project/mlflow/
-    :alt: Latest Python Release
-.. |conda-forge| image:: https://img.shields.io/conda/vn/conda-forge/mlflow.svg?style=for-the-badge&logo=anaconda
-    :target: https://anaconda.org/conda-forge/mlflow
-    :alt: Latest Conda Release
-.. |cran| image:: https://img.shields.io/cran/v/mlflow.svg?style=for-the-badge&logo=r
-    :target: https://cran.r-project.org/package=mlflow
-    :alt: Latest CRAN Release
-.. |maven| image:: https://img.shields.io/maven-central/v/org.mlflow/mlflow-parent.svg?style=for-the-badge&logo=apache-maven
-    :target: https://mvnrepository.com/artifact/org.mlflow
-    :alt: Maven Central
-.. |license| image:: https://img.shields.io/badge/license-Apache%202-brightgreen.svg?style=for-the-badge&logo=apache
-    :target: https://github.com/mlflow/mlflow/blob/master/LICENSE.txt
-    :alt: Apache 2 License
-.. |downloads| image:: https://img.shields.io/pypi/dw/mlflow?style=for-the-badge&logo=pypi&logoColor=white
-    :target: https://pepy.tech/project/mlflow
-    :alt: Total Downloads
-.. |slack| image:: https://img.shields.io/badge/slack-@mlflow--users-CF0E5B.svg?logo=slack&logoColor=white&labelColor=3F0E40&style=for-the-badge
-    :target: `Slack`_
-    :alt: Slack
-.. |twitter| image:: https://img.shields.io/twitter/follow/MLflow?style=for-the-badge&labelColor=00ACEE&logo=twitter&logoColor=white
-    :target: https://twitter.com/MLflow
-    :alt: Account Twitter
-
-.. _Slack: https://join.slack.com/t/mlflow-users/shared_invite/zt-1iffrtbly-UNU8hV03aV8feUeGmqf_uA
-
-Job Statuses
-
-|examples| |cross-version-tests| |r-devel| |test-requirements| |stale| |push-images|
-
-.. |examples| image:: https://img.shields.io/github/actions/workflow/status/mlflow-automation/mlflow/examples.yml?branch=master&event=schedule&label=Examples&style=for-the-badge&logo=github
-    :target: https://github.com/mlflow-automation/mlflow/actions/workflows/examples.yml?query=workflow%3AExamples+event%3Aschedule
-    :alt: Examples Action Status
-.. |cross-version-tests| image:: https://img.shields.io/github/actions/workflow/status/mlflow-automation/mlflow/cross-version-tests.yml?branch=master&event=schedule&label=Cross%20version%20tests&style=for-the-badge&logo=github
-    :target: https://github.com/mlflow-automation/mlflow/actions/workflows/cross-version-tests.yml?query=workflow%3A%22Cross+version+tests%22+event%3Aschedule
-.. |r-devel| image:: https://img.shields.io/github/actions/workflow/status/mlflow-automation/mlflow/r.yml?branch=master&event=schedule&label=r-devel&style=for-the-badge&logo=github
-    :target: https://github.com/mlflow-automation/mlflow/actions/workflows/r.yml?query=workflow%3AR+event%3Aschedule
-.. |test-requirements| image:: https://img.shields.io/github/actions/workflow/status/mlflow-automation/mlflow/requirements.yml?branch=master&event=schedule&label=test%20requirements&logo=github&style=for-the-badge
-    :target: https://github.com/mlflow-automation/mlflow/actions/workflows/requirements.yml?query=workflow%3A"Test+requirements"+event%3Aschedule
-.. |stale| image:: https://img.shields.io/github/actions/workflow/status/mlflow/mlflow/stale.yml?branch=master&event=schedule&label=stale&logo=github&style=for-the-badge
-    :target: https://github.com/mlflow/mlflow/actions?query=workflow%3AStale+event%3Aschedule
-.. |push-images| image:: https://img.shields.io/github/actions/workflow/status/mlflow/mlflow/push-images.yml?event=release&label=push-images&logo=github&style=for-the-badge
-    :target: https://github.com/mlflow/mlflow/actions/workflows/push-images.yml?query=event%3Arelease
-
-Installing
-----------
-Install MLflow from PyPI via ``pip install mlflow``
-
-MLflow requires ``conda`` to be on the ``PATH`` for the projects feature.
-
-Nightly snapshots of MLflow master are also available `here <https://mlflow-snapshots.s3-us-west-2.amazonaws.com/>`_.
-
-Install a lower dependency subset of MLflow from PyPI via ``pip install mlflow-skinny``
-Extra dependencies can be added per desired scenario.
-For example, ``pip install mlflow-skinny pandas numpy`` allows for mlflow.pyfunc.log_model support.
-
-Documentation
--------------
-Official documentation for MLflow can be found at https://mlflow.org/docs/latest/index.html.
-
-Roadmap
--------
-The current MLflow Roadmap is available at https://github.com/mlflow/mlflow/milestone/3. We are
-seeking contributions to all of our roadmap items with the ``help wanted`` label. Please see the
-`Contributing`_ section for more information.
-
-Community
----------
-For help or questions about MLflow usage (e.g. "how do I do X?") see the `docs <https://mlflow.org/docs/latest/index.html>`_
-or `Stack Overflow <https://stackoverflow.com/questions/tagged/mlflow>`_.
-
-To report a bug, file a documentation issue, or submit a feature request, please open a GitHub issue.
-
-For release announcements and other discussions, please subscribe to our mailing list (mlflow-users@googlegroups.com)
-or join us on `Slack`_.
-
-Running a Sample App With the Tracking API
-------------------------------------------
-The programs in ``examples`` use the MLflow Tracking API. For instance, run::
-
-    python examples/quickstart/mlflow_tracking.py
-
-This program will use `MLflow Tracking API <https://mlflow.org/docs/latest/tracking.html>`_,
-which logs tracking data in ``./mlruns``. This can then be viewed with the Tracking UI.
-
-
-Launching the Tracking UI
--------------------------
-The MLflow Tracking UI will show runs logged in ``./mlruns`` at `<http://localhost:5000>`_.
-Start it with::
-
-    mlflow ui
-
-**Note:** Running ``mlflow ui`` from within a clone of MLflow is not recommended - doing so will
-run the dev UI from source. We recommend running the UI from a different working directory,
-specifying a backend store via the ``--backend-store-uri`` option. Alternatively, see
-instructions for running the dev UI in the `contributor guide <CONTRIBUTING.md>`_.
-
-
-Running a Project from a URI
-----------------------------
-The ``mlflow run`` command lets you run a project packaged with a MLproject file from a local path
-or a Git URI::
-
-    mlflow run examples/sklearn_elasticnet_wine -P alpha=0.4
-
-    mlflow run https://github.com/mlflow/mlflow-example.git -P alpha=0.4
-
-See ``examples/sklearn_elasticnet_wine`` for a sample project with an MLproject file.
-
-
-Saving and Serving Models
--------------------------
-To illustrate managing models, the ``mlflow.sklearn`` package can log scikit-learn models as
-MLflow artifacts and then load them again for serving. There is an example training application in
-``examples/sklearn_logistic_regression/train.py`` that you can run as follows::
-
-    $ python examples/sklearn_logistic_regression/train.py
-    Score: 0.666
-    Model saved in run <run-id>
-
-    $ mlflow models serve --model-uri runs:/<run-id>/model
-
-    $ curl -d '{"dataframe_split": {"columns":[0],"index":[0,1],"data":[[1],[-1]]}}' -H 'Content-Type: application/json'  localhost:5000/invocations
-
-**Note:** If using MLflow skinny (``pip install mlflow-skinny``) for model serving, additional
-required dependencies (namely, ``flask``) will need to be installed for the MLflow server to function.
-
-Official MLflow Docker Image
-----------------------------
-
-The official MLflow Docker image is available on GitHub Container Registry at https://ghcr.io/mlflow/mlflow.
-
-.. code-block:: shell
-
-    export CR_PAT=YOUR_TOKEN
-    echo $CR_PAT | docker login ghcr.io -u USERNAME --password-stdin
-    # Pull the latest version
-    docker pull ghcr.io/mlflow/mlflow
-    # Pull 2.2.1
-    docker pull ghcr.io/mlflow/mlflow:v2.2.1
-
-Contributing
-------------
-We happily welcome contributions to MLflow. We are also seeking contributions to items on the
-`MLflow Roadmap <https://github.com/mlflow/mlflow/milestone/3>`_. Please see our
-`contribution guide <CONTRIBUTING.md>`_ to learn more about contributing to MLflow.
-
-Core Members
-------------
-
-MLflow is currently maintained by the following core members with significant contributions from hundreds of exceptionally talented community members.
-
-- `Ben Wilson <https://github.com/BenWilson2>`_
-- `Corey Zumar <https://github.com/dbczumar>`_
-- `Daniel Lok <https://github.com/daniellok-db>`_
-- `Gabriel Fu <https://github.com/gabrielfu>`_
-- `Harutaka Kawamura <https://github.com/harupy>`_
-- `Serena Ruan <https://github.com/serena-ruan>`_
-- `Weichen Xu <https://github.com/WeichenXu123>`_
-- `Yuki Watanabe <https://github.com/B-Step62>`_
+</article></div>
